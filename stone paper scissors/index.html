@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stone paper scissors game </title>
+    <style>
+        body{
+            text-align: center;
+            background-image: url(https://preview.redd.it/rock-paper-scissors-bing-image-creator-v0-11fqpog7bbsb1.jpg?width=640&crop=smart&auto=webp&s=8b62cceb9b50c3b2a8dee144cb12166b4abce182);
+            background-position: center;
+            background-size: 1000px;
+            background-repeat: no-repeat;
+            /* background: black; */
+            /* background-repeat: no-repeat; */
+           /* height: 900px; */
+           /* height: 100px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+
+           
+        }
+       .box{
+        height: 300px;
+        border-radius: 10%;
+        /* border: 2px solid black; */
+        width: 300px;
+        background-color: rgba(145, 8, 60, 0.699);
+        box-shadow: 60px 0 60px 0 rgb(61, 1, 21);
+       }
+       .box h1{
+        font-family: cursive;
+        font-size: 100;
+
+       }
+       .box button{
+        background-color: rgb(236, 159, 172);
+        border: none;
+        height: 30px;
+        width: 80px;
+        box-shadow: 10px 10px 10px 10px rgba(87, 6, 33, 0.918);
+        border-radius: 10%;
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>stone paper scissors <span style="color: rgb(9, 12, 175);">Game</span></h1>
+
+    <button  onclick="
+    let randomNumber = Math.random()*3;
+    let compuerChoice;
+    if(randomNumber > 0 && randomNumber<=1){
+        compuerChoice = 'stone';
+    }else if(randomNumber >1 && randomNumber <=2){
+        compuerChoice ='paper';
+    }else{
+        compuerChoice = 'scissors';
+    }
+
+    // result
+    let resultMsg ;
+    if(compuerChoice === 'stone'){
+        resultMsg =`it's tie`;
+    }else if(compuerChoice ==='paper'){
+        resultMsg ='computer has won the game';
+    }else if(compuerChoice  === 'scissors'){
+        resultMsg ='you won the game';
+    }
+
+    alert(`you chosen stone. computer choice is ${compuerChoice}  and ${ resultMsg}`);
+    ">stone</button>
+
+    <button onclick="
+     randomNumber = Math.random()*3;
+     compuerChoice ='';
+     if(randomNumber >0 && randomNumber<=1){
+        compuerChoice = 'stone'
+     }else if(randomNumber >1 &&randomNumber<=2){
+        compuerChoice = 'paper'
+     }else{
+        compuerChoice ='stone';
+     }
+
+    //  result
+    resultMsg =compuerChoice;
+    if(compuerChoice === 'stone'){
+        resultMsg ='you won the game';
+    }else if(compuerChoice ==='paper'){
+        resultMsg =`it's tie`;
+    }else if(compuerChoice ==='scissors'){
+        resultMsg = 'computer has won the game';
+    }
+    alert(`you chosen paper. computer choice is ${compuerChoice} and ${resultMsg}`);
+    ">paper</button>
+
+    <button onclick="
+    randomNumber = Math.random()*3;
+    compuerChoice ='';
+    if(randomNumber >0 && randomNumber<=1){
+        compuerChoice ='stone';
+    }else if(randomNumber>0 && randomNumber<=2){
+        compuerChoice ='paper';
+    }else{
+        compuerChoice ='scissors';
+    }
+    // result
+
+    resultMsg =compuerChoice;
+    if(compuerChoice ==='stone'){
+        resultMsg ='compuer has won the game';
+    }else if(compuerChoice ==='paper'){
+        resultMsg ='you won the game';
+    }else if(compuerChoice ==='scissors'){
+        resultMsg =`it's tie`;
+    }
+    alert(`you chosen scissors. computer choice is ${compuerChoice} and ${resultMsg}`);
+
+    ">scissors</button>
+
+    <p>enjoy the game </p>
+    </div>
+</body>
+</html>
